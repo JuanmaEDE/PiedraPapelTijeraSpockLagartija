@@ -6,7 +6,7 @@ public class MoveWords{
     public static final int GANA = 1;
     public static final int PIERDE = 2;
 
-    private static final String[] validMoves = {"PIEDRA","TIJERAS", "LAGARTIJA", "PAPEL", "SPOCK"};
+    private static final String[] validMoves = {"PIEDRA","TIJERAS", "TOTIRO", "PAPEL", "SEPIA"};
     private static final String[] validCommands = {"SALIR", "HELP"};
 
     private Random rnd;
@@ -67,20 +67,20 @@ public class MoveWords{
 
 	    if (first_i == second_i) return EMPATE;
 	    
-	    if (first.equals("Spock")) {
+	    if (first.equals("Sepia")) {
 	        if (second.equals("Tijeras") || second.equals("Piedra")) return GANA;
 	        else return PIERDE;
 	    }
-	    if (second.equals("Spock")) {
+	    if (second.equals("Sepia")) {
 	        if (first.equals("Tijeras") || first.equals("Piedra")) return PIERDE;
 	        else return GANA;
 	    }
-	    if (first.equals("Lagartija")) {
-	        if (second.equals("Papel") || second.equals("Spock")) return GANA;
+	    if (first.equals("Torito")) {
+	        if (second.equals("Papel") || second.equals("Sepia")) return GANA;
 	        else return PIERDE;
 	    }
-	    if (second.equals("Lagartija")) {
-	        if (first.equals("Papel") || first.equals("Spock")) return PIERDE;
+	    if (second.equals("Torito")) {
+	        if (first.equals("Papel") || first.equals("Sepia")) return PIERDE;
 	        else return GANA;
 	    }
 	    
